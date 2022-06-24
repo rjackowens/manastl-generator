@@ -5,12 +5,9 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>YAML Build Pipeline Request</title>
+    <title>ManaSTL Raffle Generator</title>
     <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico/') }}">
 
     <!-- Icons font CSS-->
@@ -40,99 +37,19 @@
 
 <body>
     {{ toastr.include_toastr_js() }}
-    <div class="page-wrapper p-t-100 p-b-100 font-poppins" style="background-image:url({{'static/images/bull-bear-white-background.png'}});">
+    <div class="page-wrapper p-t-100 p-b-100 font-poppins" style="background-image:url({{'static/images/manastl-background.png'}});">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">YAML Build Pipeline Request</h2>
+                    <h2 class="title">ManaSTL Raffle Generator</h2>
                     <form method="POST">
                         <div class="row row-space">
-                            <div class="input-group">
-                                <label class="label">Organization Name</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>Stifel Financial</option>
-                                        <option>Stifel POC</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label class="label">Project Name</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select id="project-name" name="project-name">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>AceAutomation</option>
-                                        <option>DataPipeline</option>
-                                        <option<>DevOps</option>
-                                        <option>External</option>
-                                        <option>Jobs</option>
-                                        <option>Miscellaneous</option>
-                                        <option>Packer</option>
-                                        <option>Tracker2.0</option>
-                                        <option>Utilities</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label class="label">Program Framework</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select id="language-input" name="language-input">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>.NET Core</option>
-                                        <option>AngularJS</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label class="label">Framework Version</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>2.1</option>
-                                        <option>3.1</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label class="label">Build Configuration</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select id="build-config-name" name="build-config-name">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>Release</option>
-                                        <option>Debug</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label class="label">Agent Pool</label>
-                                <div class="p-t-10">
-                                    <label class="radio-container m-r-45">AWS
-                                        <input type="radio" value="AWS" name="agent-pool-answer" checked="checked">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="radio-container">Local
-                                        <input type="radio" value="Local" name="agent-pool-answer">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div> 
-                            <!-- <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Project Name</label>
-                                    <input class="input--style-4" type="text" name="project-name">
-                                </div>
-                            </div> -->
+                            
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Repo Name</label>
+                                    <label class="label">Name</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4" type="text" name="repo-name" placeholder="stifel.enrollment.api">
+                                        <input class="input--style-4" type="text" name="input-name" placeholder="Mark Mehochko">
                                         <i class="zmdi zmdi-github input-icon"></i>
                                     </div>
                                 </div>
@@ -141,16 +58,49 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Application Name</label>
+                                    <label class="label">Total Number of Spots</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4" type="text" name="app-name" placeholder="enrollment.sln">
+                                        <input class="input--style-4" type="text" name="num-spots" placeholder="1">
                                         <i class="zmdi zmdi-code input-icon"></i>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row row-space">
+                            
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">Specifically Called Spots {}</label>
+                                            <div class="input-group-icon">
+                                                <input class="input--style-4" type="text" name="called-spots" placeholder="1">
+                                                <i class="zmdi zmdi-github input-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <div class="row row-space">
+
+
+                                    <div class="col-2">
+                                            <div class="input-group">
+                                                <label class="label">Range of Called Spots []</label>
+                                                <div class="input-group-icon">
+                                                    <input class="input--style-4" type="text" name="range-called-spots" placeholder="1">
+                                                    <i class="zmdi zmdi-github input-icon"></i>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
                         <div class="p-t-15">
                             <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
                         </div>
+                        
+                        <!-- only appears after form submission -->
+                        {% for item in raw_values %}
+                        <div>
+                            {{item}}
+                        </div>
+                        {% endfor %}
+                        
+
                     </form>
                 </div>
             </div>

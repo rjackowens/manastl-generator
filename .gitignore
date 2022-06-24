@@ -1,5 +1,4 @@
 __pycache__/
 env/
-azure-pipelines.yml
 src/static/config.py
 .vscode/launch.json
